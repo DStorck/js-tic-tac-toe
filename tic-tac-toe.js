@@ -83,29 +83,31 @@ $(document).ready(function() {
    var button = $(this)
    var space_id = $(this).data('space')
 
-  //  console.log("space id : ",space_id)
-  console.log('game board')
-  console.log(game.board)
+   console.log('game board')
+   console.log(game.board)
 
-   if (button.hasClass('space')) {
-     console.log('you tried to push' , button)
-     $('#coin')[0].play();
-     game.mark(space_id)
-     console.log(game.is_a_winner())
-     console.log(game.is_a_draw())
-     if (game.is_a_winner()) {
-      $('#winner')[0].play();
+    if (button.hasClass('space')) {
+       console.log('you tried to push' , button)
+       $('#coin')[0].play();
+       game.mark(space_id)
+       console.log(game.is_a_winner())
+       console.log(game.is_a_draw())
+       if (game.is_a_winner()) {
+        $('#winner')[0].play();
     }
 
     if (game.is_a_draw()) {
       $('#tie')[0].play();
     }
 
-     var display = container.find('button.' + space_id)
-     var image = display.find('img')
-     console.log(image)
-    //  var display = container.children().children().children().children().children('button.' + space_id)
-    image.attr("src","media/mario.png");
+    var display = container.find('button.' + space_id)
+    var image = display.find('img')
+    if (game.board[space_id] === "A") {
+      image.attr("src","media/mario.png");
+    } else if (game.board[space_id] === "B") {
+      image.attr("src","media/bad_guy.png");
+
+    }
     //  display.text(game.board[space_id])
    }
  })
@@ -115,7 +117,8 @@ $(document).ready(function() {
    event.preventDefault()
   //  var button = $(this)
    game.reset()
-   $(".space").text("")
+   var image = container.find('img')
+   image.attr('src', 'media/empty.png')
 
  })
 
