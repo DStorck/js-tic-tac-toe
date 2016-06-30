@@ -1,3 +1,35 @@
 html {
-  
+  font-size: 30px;
 }
+
+body {
+  background-color: rgb(193, 97, 223);
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  text-align: center;
+  height: 8rem;
+  width: 90%;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  width: 5rem;
+  height: 5rem;
+  margin: 3px;
+  padding: 3px;
+  border: 3px solid pink;
+  border-radius: 50%;
+}
+
+button:focus { outline: none; }
+
+/*#space { background-color: #3e181b; color: #db1d2d; }
+#space:hover { background-color: #661920; }
+#space:active, #space.active { background-color: #db1d2d; }*/
