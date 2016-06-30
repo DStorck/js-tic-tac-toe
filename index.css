@@ -23,6 +23,11 @@ div {
   margin-right: 30%;
 }
 
+img {
+  height: 5rem;
+  width: 5rem;
+}
+
 button.space {
   cursor: pointer;
   font-size: 1rem;
@@ -31,7 +36,7 @@ button.space {
   margin: 3px;
   padding: 3px;
   border: 3px solid pink;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
 }
 
 button:focus { outline: none; }

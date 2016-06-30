@@ -8,23 +8,35 @@
 
   <body>
     <h1>Tic Tac Toe</h1>
+    <div id="audio_embeds">
+      <audio id="coin">
+        <source src="media/coin.wav" type="audio/wav"></source>
+      </audio>
+      <audio id="winner">
+        <source src="media/win.wav" type="audio/wav"></source>
+      </audio>
+      <audio id="tie">
+        <source src="media/tie.wav" type="audio/wav"></source>
+      </audio>
+    </div>
+
     <div id="tic-tac-toe">
       <!-- <section class="board"></section> -->
       <table>
         <tr class="first-row">
-         <td><button class="space one_a" data-space="one_a"></button></td>
-         <td><button class="space one_b" data-space="one_b"></button></td>
-         <td><button class="space one_c" data-space="one_c"></button></td>
+         <td><button class="space one_a" data-space="one_a"><img src="media/empty.png"></button></td>
+         <td><button class="space one_b" data-space="one_b"><img src="media/empty.png"></button></td>
+         <td><button class="space one_c" data-space="one_c"><img src="media/empty.png"></button></td>
         </tr>
         <tr class="second-row">
-         <td><button class="space two_a" data-space="two_a"></button></td>
-         <td><button class="space two_b" data-space="two_b"></button></td>
-         <td><button class="space two_c" data-space="two_c"></button></td>
+         <td><button class="space two_a" data-space="two_a"><img src="media/empty.png"></button></td>
+         <td><button class="space two_b" data-space="two_b"><img src="media/empty.png"></button></td>
+         <td><button class="space two_c" data-space="two_c"><img src="media/empty.png"></button></td>
        </tr>
         <tr class="third-row">
-         <td><button class="space three_a" data-space="three_a"></button></td>
-         <td><button class="space three_b" data-space="three_b"></button></td>
-         <td><button class="space three_c" data-space="three_c"></button></td>
+         <td><button class="space three_a" data-space="three_a"><img src="media/empty.png"></button></td>
+         <td><button class="space three_b" data-space="three_b"><img src="media/empty.png"></button></td>
+         <td><button class="space three_c" data-space="three_c"><img src="media/empty.png"></button></td>
        </tr>
       </table>
       <button class="reset">Play another game</button>

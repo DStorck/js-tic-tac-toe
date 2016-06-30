@@ -26,7 +26,6 @@ function TicTacToe() {
     console.log(this.is_a_winner())
     if (this.is_a_winner()) {
       console.log('yahoooo')
-
     }
   }
 
@@ -37,8 +36,16 @@ function TicTacToe() {
     }
   }
 
-  this.is_a_winner = function() {
+  this.is_a_draw = function () {
+    for (var element in this.board) {
+      if (this.board[element] === null) {
+        return false
+      }
+    }
+    return true
+  }
 
+  this.is_a_winner = function() {
     if (this.board['one_a'] === this.board['one_b'] && this.board['one_b'] === this.board['one_c'] && this.board['one_a'] != null) {
       return true
     }
@@ -82,10 +89,24 @@ $(document).ready(function() {
 
    if (button.hasClass('space')) {
      console.log('you tried to push' , button)
+     $('#coin')[0].play();
      game.mark(space_id)
+     console.log(game.is_a_winner())
+     console.log(game.is_a_draw())
+     if (game.is_a_winner()) {
+      $('#winner')[0].play();
+    }
+
+    if (game.is_a_draw()) {
+      $('#tie')[0].play();
+    }
+
      var display = container.find('button.' + space_id)
+     var image = display.find('img')
+     console.log(image)
     //  var display = container.children().children().children().children().children('button.' + space_id)
-     display.text(game.board[space_id])
+    image.attr("src","media/mario.png");
+    //  display.text(game.board[space_id])
    }
  })
 
