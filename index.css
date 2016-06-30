@@ -10,11 +10,15 @@ h1 {
   text-align: center;
 }
 
-div {
+table {
   text-align: center;
   height: 8rem;
-  width: 90%;
-  margin: auto;
+  width: 50%;
+  /*margin: auto;*/
+}
+
+div {
+  text-align: center;
 }
 
 button {
