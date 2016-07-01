@@ -41,10 +41,33 @@ function TicTacToe() {
         this.turn += 1
         this.animate_player()
       }
+      computer_choice = this.computer_choice()
+      this.turn += 1
+      console.log(this.board)
+      console.log(computer_choice)
+
+      var $image = $('button.'+ computer_choice +  ' img')
+      console.log($image)
+      $image.attr("src","media/bad_guy.png");
+  }
+
+  this.computer_choice = function() {
+    var nums = ['one', 'two', 'three']
+    var letters = ['a', 'b', 'c']
+    var randnum = Math.floor((Math.random() * 3));
+    var randlet = Math.floor((Math.random() * 3));
+    var computer_choice = nums[randlet] + "_" + letters[randnum]
+    if (this.board[computer_choice] === null) {
+      this.board[computer_choice] = "B"
+    } else {
+      this.computer_choice()
+    }
+    return computer_choice
+
   }
 
   this.reset = function() {
-    this.turn = 1
+    this.turn = 2
     for (var element in this.board) {
       this.board[element] = null
     }
