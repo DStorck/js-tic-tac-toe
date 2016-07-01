@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <h1>Tic Tac Toe</h1>
+    <h1>Tic Tac Mario</h1>
     <div id="audio_embeds">
       <audio id="coin">
         <source src="media/coin.wav" type="audio/wav"></source>
@@ -19,6 +19,16 @@
         <source src="media/tie.wav" type="audio/wav"></source>
       </audio>
     </div>
+
+    <div id="mario">
+      <img class="mario" alt="mario" src='media/mario.png'>
+      <img class="coin"  alt="coin" src='media/coin.png'>
+      <span> X </span>
+      <span id="mario-score">0</span>
+    </div>
+
+
+
 
     <div id="tic-tac-toe">
       <!-- <section class="board"></section> -->
@@ -41,6 +51,14 @@
       </table>
       <button class="reset">Play another game</button>
     </div>
+
+    <div id="bad_guy">
+      <img class="goomba" alt="bad guy" src='media/bad_guy.png'>
+      <img class="coin"  alt="coin" src='media/coin.png'>
+      <span> X </span>
+      <span id='goomba-score'>0</span>
+    </div>
+
   </body>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="tic-tac-toe.js"></script>
